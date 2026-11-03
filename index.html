@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Green Lending | AI-Powered Mortgage Lead Engagement & Texting Platform</title>
+  <meta name="description"
+    content="Custom AI Mortgage Lead Engagement & Two-Way SMS Platform built for Green Lending by Neo Gen Technologies.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="dark-theme">
+
+  <!-- Top Announcement & Co-Branding Bar -->
+  <header class="top-nav-bar">
+    <div class="nav-container">
+      <div class="brand-partnership">
+        <div class="brand-item provider-brand">
+          <img src="/assets/neogen-logo.jpg" alt="Neo Gen Technologies Logo" class="brand-logo neogen-img">
+          <div class="brand-meta">
+            <span class="brand-title">Neo Gen Technologies</span>
+            <span class="brand-sub">AI Engineering & Automation</span>
+          </div>
+        </div>
+
+        <div class="partnership-badge">
+          <span class="handshake-icon">🤝</span>
+          <span class="badge-text">Built for</span>
+        </div>
+
+        <div class="brand-item client-brand">
+          <div class="client-logo-badge official-gl-badge">
+            <img src="/assets/greenlending-logo.png" alt="Green Lending Logo" class="official-gl-logo">
+          </div>
+          <div class="brand-meta">
+            <span class="brand-title">Green Lending</span>
+            <span class="brand-sub">greenlending.com</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-system-status">
+        <div class="system-indicator">
+          <span class="status-dot pulsing"></span>
+          <span class="status-text">Production Architecture Demo</span>
+        </div>
+        <div class="quick-links">
+          <a href="#proposal-section" class="btn-pill outline" onclick="switchTab('proposal')">View Project Proposal</a>
+          <button class="btn-pill primary" onclick="openKickoffModal()">Schedule Kickoff</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sub-header Main Navigation Bar -->
+  <nav class="main-tabs-bar">
+    <div class="nav-container tabs-wrapper">
+      <ul class="nav-tabs">
+        <li class="tab-item active" data-tab="simulator">
+          <button onclick="switchTab('simulator')">
+            <span class="tab-icon">📱</span>
+            <span>Live AI SMS Simulator</span>
+            <span class="tab-badge hot">Interactive</span>
+          </button>
+        </li>
+        <li class="tab-item" data-tab="crm">
+          <button onclick="switchTab('crm')">
+            <span class="tab-icon">👥</span>
+            <span>Mortgage CRM & Leads</span>
+            <span class="tab-badge count" id="leadCountBadge">4</span>
+          </button>
+        </li>
+        <li class="tab-item" data-tab="inbox">
+          <button onclick="switchTab('inbox')">
+            <span class="tab-icon">💬</span>
+            <span>Two-Way SMS Inbox</span>
+          </button>
+        </li>
+        <li class="tab-item" data-tab="campaigns">
+          <button onclick="switchTab('campaigns')">
+            <span class="tab-icon">⚡</span>
+            <span>Automated Sequences</span>
+          </button>
+        </li>
+        <li class="tab-item" data-tab="analytics">
+          <button onclick="switchTab('analytics')">
+            <span class="tab-icon">📊</span>
+            <span>Reporting & Analytics</span>
+          </button>
+        </li>
+        <li class="tab-item" data-tab="architecture">
+          <button onclick="switchTab('architecture')">
+            <span class="tab-icon">🏗️</span>
+            <span>Architecture & Stack</span>
+          </button>
+        </li>
+        <li class="tab-item" data-tab="proposal">
+          <button onclick="switchTab('proposal')">
+            <span class="tab-icon">📄</span>
+            <span>Project Proposal</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Platform Banner -->
+  <section class="platform-hero">
+    <div class="container hero-content">
+      <div class="hero-text-col">
+        <div class="hero-chip">
+          <span class="chip-dot"></span>
+          <span>HELOC • Refinance • Home Purchase Automation</span>
+        </div>
+        <h1 class="hero-headline">
+          AI-Powered Mortgage Lead Engagement &amp; SMS Platform
+        </h1>
+        <p class="hero-subtext">
+          Engineered by <strong>Neo Gen Technologies</strong> exclusively for <strong>Green Lending</strong>. Automate
+          prospect engagement in &lt;60 seconds, run natural-language qualification conversations, and seamlessly route
+          high-intent mortgage borrowers to your top loan officers.
+        </p>
+        <div class="hero-stats-row">
+          <div class="hero-stat-card">
+            <span class="stat-num">&lt; 90s</span>
+            <span class="stat-label">Initial Lead Response</span>
+          </div>
+          <div class="hero-stat-card">
+            <span class="stat-num">43.1%</span>
+            <span class="stat-label">SMS Reply Rate</span>
+          </div>
+          <div class="hero-stat-card">
+            <span class="stat-num">3x</span>
+            <span class="stat-label">Loan Officer Meetings</span>
+          </div>
+          <div class="hero-stat-card">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">TCPA &amp; 10DLC Safe</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-cta-col">
+        <div class="hero-card-panel">
+          <div class="panel-header">
+            <span class="panel-tag">Client Deployment Package</span>
+            <span class="panel-badge-pill">Enterprise Turnkey</span>
+          </div>
+          <p class="panel-desc">Fully custom-built proprietary software with zero vendor lock-in. PostgreSQL, Redis,
+            BullMQ, OpenAI API &amp; Twilio / Telnyx.</p>
+          <ul class="panel-features">
+            <li>✓ Complete HELOC, Refi &amp; Purchase Workflows</li>
+            <li>✓ Centralized Mortgage CRM &amp; 2-Way Inbox</li>
+            <li>✓ 1-Click Loan Officer Takeover System</li>
+            <li>✓ Turnkey Delivery in 4–6 Weeks</li>
+          </ul>
+          <div class="panel-action">
+            <button class="btn-primary full-width" onclick="switchTab('simulator')">
+              <span>Test Interactive AI Simulator</span>
+              <span class="btn-arrow">→</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN TAB CONTENT AREA -->
+  <main class="main-content-container container">
+
+    <!-- ========================================== -->
+    <!-- TAB 1: AI SMS SIMULATOR (Live Demo) -->
+    <!-- ========================================== -->
+    <section id="tab-simulator" class="tab-view active">
+      <div class="section-intro">
+        <div class="intro-left">
+          <h2>Interactive AI SMS Conversation Engine</h2>
+          <p>Experience real-time AI qualification tailored for Green Lending. Select a mortgage workflow, send text
+            messages, or use quick scenario chips to see how the natural language engine qualifies borrowers and scores
+            intent.</p>
+        </div>
+        <div class="intro-right workflow-selector-card">
+          <label class="control-label">Select Mortgage Qualification Workflow:</label>
+          <div class="workflow-toggle-group">
+            <button class="wf-btn active" data-wf="HELOC" onclick="selectWorkflow('HELOC')">
+              <span class="wf-icon">🏡</span>
+              <span>HELOC</span>
+            </button>
+            <button class="wf-btn" data-wf="Refinance" onclick="selectWorkflow('Refinance')">
+              <span class="wf-icon">📉</span>
+              <span>Refinance</span>
+            </button>
+            <button class="wf-btn" data-wf="Purchase" onclick="selectWorkflow('Purchase')">
+              <span class="wf-icon">🔑</span>
+              <span>Home Purchase</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="simulator-layout">
+        <!-- Smartphone Container -->
+        <div class="simulator-phone-wrapper">
+          <div class="smartphone-frame">
+            <div class="phone-notch">
+              <div class="speaker"></div>
+              <div class="camera"></div>
+            </div>
+
+            <!-- Phone Header -->
+            <div class="phone-screen-header">
+              <div class="phone-carrier-row">
+                <span class="carrier-time" id="carrierTime">10:24 AM</span>
+                <span class="carrier-icons">5G 📶 98% 🔋</span>
+              </div>
+              <div class="phone-contact-row">
+                <button class="phone-back-btn">‹</button>
+                <div class="contact-avatar gl-avatar">
+                  <img src="/assets/greenlending-logo.png" alt="Green Lending" class="phone-gl-logo">
+                </div>
+                <div class="contact-info">
+                  <div class="contact-name">Alex from Green Lending</div>
+                  <div class="contact-status">
+                    <span class="status-circle-small online"></span>
+                    <span id="aiActiveState">AI Active · 1-800-GREEN-LOAN</span>
+                  </div>
+                </div>
+                <div class="phone-call-btn">📞</div>
+              </div>
+            </div>
+
+            <!-- SMS Message Thread -->
+            <div class="phone-messages-area" id="phoneChatBody">
+              <!-- Dynamically populated by app.js -->
+            </div>
+
+            <!-- Typing indicator -->
+            <div class="typing-indicator" id="phoneTypingIndicator" style="display: none;">
+              <span class="typing-name">Alex is generating reply</span>
+              <div class="typing-dots">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+
+            <!-- Phone Input Form -->
+            <form class="phone-input-bar" id="phoneChatForm" onsubmit="handleSendSms(event)">
+              <button type="button" class="btn-attach" title="Attach file or pre-approval"
+                onclick="alert('Document upload simulation: Leads can upload paystubs, W-2s or appraisal docs.')">📎</button>
+              <input type="text" id="phoneChatInput" class="phone-text-input"
+                placeholder="Type a reply as the borrower..." autocomplete="off">
+              <button type="submit" class="btn-send-sms" id="phoneSendBtn">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+                </svg>
+              </button>
+            </form>
+          </div>
+
+          <div class="phone-footnote">
+            <span>Powered by <strong>Neo Gen Technologies</strong> AI Conversational Pipeline</span>
+          </div>
+        </div>
+
+        <!-- Simulator Intelligence Dashboard (Side Panel) -->
+        <div class="simulator-intel-panel">
+
+          <!-- Live Intent & Lead Temperature -->
+          <div class="intel-card highlight-card">
+            <div class="card-header-flex">
+              <span class="card-title">Real-Time AI Intent &amp; Lead Scoring</span>
+              <span class="lead-score-badge hot" id="simScoreBadge">🔥 Hot Lead (94%)</span>
+            </div>
+            <div class="scoring-meter-wrap">
+              <div class="meter-bar">
+                <div class="meter-fill hot" id="simScoreFill" style="width: 94%;"></div>
+              </div>
+              <div class="meter-labels">
+                <span>Cold (0-40)</span>
+                <span>Warm (41-79)</span>
+                <span>Hot (80-100)</span>
+              </div>
+            </div>
+            <div class="intent-pill-row">
+              <span class="label-dim">Detected Intent:</span>
+              <span class="intent-pill" id="simIntentText">High Intent - HELOC Equity Stated</span>
+            </div>
+          </div>
+
+          <!-- Live Extracted Qualification Data -->
+          <div class="intel-card">
+            <div class="card-header-flex">
+              <span class="card-title">Automated Qualification Extraction</span>
+              <span class="badge-mini">Live Parser</span>
+            </div>
+            <p class="intel-help">As the borrower answers in natural speech, the AI extracts structured loan criteria
+              into the Green Lending CRM without form friction.</p>
+
+            <div class="extracted-grid" id="simExtractedFields">
+              <div class="field-box">
+                <span class="field-name">Target Mortgage Goal</span>
+                <span class="field-val" id="extractCategory">HELOC (Home Equity)</span>
+              </div>
+              <div class="field-box">
+                <span class="field-name">Estimated Home Value</span>
+                <span class="field-val highlight" id="extractPropValue">$680,000</span>
+              </div>
+              <div class="field-box">
+                <span class="field-name">Existing Mortgage Balance</span>
+                <span class="field-val" id="extractBalance">$310,000</span>
+              </div>
+              <div class="field-box">
+                <span class="field-name">Estimated Available Equity</span>
+                <span class="field-val text-emerald" id="extractEquity">$370,000 (54% LTV)</span>
+              </div>
+              <div class="field-box">
+                <span class="field-name">Requested Borrowing Amount</span>
+                <span class="field-val" id="extractDesired">$95,000</span>
+              </div>
+              <div class="field-box">
+                <span class="field-name">Use of Funds</span>
+                <span class="field-val" id="extractPurpose">Kitchen &amp; Bath Remodel</span>
+              </div>
+              <div class="field-box">
+                <span class="field-name">Target Timeline</span>
+                <span class="field-val highlight" id="extractTimeline">Ready within 30 days</span>
+              </div>
+              <div class="field-box">
+                <span class="field-name">Assigned Loan Officer</span>
+                <span class="field-val" id="extractLO">Sarah Jenkins (Senior LO)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Test Scenarios Chips -->
+          <div class="intel-card">
+            <div class="card-header-flex">
+              <span class="card-title">Quick Test Prompts (Click to Send)</span>
+              <span class="badge-mini">Simulation Presets</span>
+            </div>
+            <div class="quick-chips-grid" id="quickChipsContainer">
+              <!-- Dynamically populated based on selected workflow -->
+            </div>
+          </div>
+
+          <!-- Controls & Handoff Simulation -->
+          <div class="intel-card action-card">
+            <div class="card-header-flex">
+              <span class="card-title">Loan Officer Human Intervention Controls</span>
+            </div>
+            <div class="handoff-controls-row">
+              <button class="btn-takeover" id="btnTakeoverSimulator" onclick="toggleSimulatorTakeover()">
+                <span class="btn-icon">⚡</span>
+                <span id="btnTakeoverSimText">Take Over as Loan Officer</span>
+              </button>
+              <button class="btn-outline-danger" onclick="simulateOptOut()">
+                <span>Simulate "STOP" (TCPA Opt-Out)</span>
+              </button>
+              <button class="btn-outline-subtle" onclick="resetSimulatorChat()">
+                <span>Reset Conversation</span>
+              </button>
+            </div>
+            <div class="tcpa-note">
+              <span>🛡️ TCPA &amp; 10DLC Safeguard: Automated opt-out suppression, quiet hour scheduling (8:00 AM – 9:00
+                PM local), and zero non-compliant financial guarantees.</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 2: MORTGAGE CRM & LEADS -->
+    <!-- ========================================== -->
+    <section id="tab-crm" class="tab-view">
+      <div class="section-intro">
+        <div class="intro-left">
+          <h2>Centralized Mortgage Lead Management &amp; CRM</h2>
+          <p>Real-time pipeline tracking prospect engagement across HELOC, Refinance, and Purchase campaigns. Click any
+            lead to inspect their complete conversation timeline, AI qualification data, and assign loan officers.</p>
+        </div>
+        <div class="intro-right">
+          <button class="btn-primary" onclick="openNewLeadModal()">
+            <span class="btn-icon">+</span>
+            <span>Add Inbound Lead</span>
+          </button>
+          <button class="btn-outline" onclick="simulateCsvImport()">
+            <span class="btn-icon">📥</span>
+            <span>Import CSV Lead List</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- CRM Stats Row -->
+      <div class="crm-kpi-bar">
+        <div class="crm-kpi-item">
+          <span class="kpi-label">Total Leads</span>
+          <span class="kpi-val" id="crmTotalLeads">2,750</span>
+        </div>
+        <div class="crm-kpi-item">
+          <span class="kpi-label">🔥 Hot Leads</span>
+          <span class="kpi-val text-red" id="crmHotLeads">525</span>
+        </div>
+        <div class="crm-kpi-item">
+          <span class="kpi-label">☀️ Warm Leads</span>
+          <span class="kpi-val text-yellow" id="crmWarmLeads">1,140</span>
+        </div>
+        <div class="crm-kpi-item">
+          <span class="kpi-label">⚡ Active LO Takeovers</span>
+          <span class="kpi-val text-blue" id="crmTakeoverCount">1</span>
+        </div>
+        <div class="crm-kpi-item">
+          <span class="kpi-label">Average AI Response Time</span>
+          <span class="kpi-val text-emerald">1.4s</span>
+        </div>
+      </div>
+
+      <!-- Filters & Search Toolbar -->
+      <div class="crm-toolbar">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="leadSearchInput" placeholder="Search by borrower name, phone, or loan officer..."
+            oninput="filterLeadsTable()">
+        </div>
+
+        <div class="filter-group">
+          <select id="filterCategory" onchange="filterLeadsTable()" class="select-pill">
+            <option value="ALL">All Categories</option>
+            <option value="HELOC">HELOC</option>
+            <option value="Refinance">Refinance</option>
+            <option value="Purchase">Home Purchase</option>
+          </select>
+
+          <select id="filterScore" onchange="filterLeadsTable()" class="select-pill">
+            <option value="ALL">All Scores</option>
+            <option value="Hot">🔥 Hot Only</option>
+            <option value="Warm">☀️ Warm Only</option>
+            <option value="Cold">❄️ Cold Only</option>
+          </select>
+
+          <button class="btn-export-csv" onclick="exportLeadsCsv()">
+            <span>Export Table (.CSV)</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Leads Data Table -->
+      <div class="leads-table-card">
+        <div class="table-responsive">
+          <table class="leads-table" id="leadsTable">
+            <thead>
+              <tr>
+                <th>Borrower Name &amp; Contact</th>
+                <th>Category</th>
+                <th>AI Score</th>
+                <th>Key Qualification Figures</th>
+                <th>Assigned LO</th>
+                <th>Pipeline Status</th>
+                <th>Last Active</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="leadsTableBody">
+              <!-- Populated via app.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 3: TWO-WAY SMS INBOX -->
+    <!-- ========================================== -->
+    <section id="tab-inbox" class="tab-view">
+      <div class="section-intro">
+        <div class="intro-left">
+          <h2>Centralized Two-Way Mortgage SMS Inbox</h2>
+          <p>Supervise ongoing AI conversations in real-time. Loan officers can intervene instantly with 1-click
+            takeover, send quick personalized mortgage terms, and schedule calls.</p>
+        </div>
+      </div>
+
+      <div class="inbox-layout">
+        <!-- Inbox Sidebar: Conversations List -->
+        <div class="inbox-threads-sidebar">
+          <div class="threads-header">
+            <input type="text" class="threads-search" placeholder="Filter conversations..."
+              oninput="filterThreadsList(this.value)">
+          </div>
+          <div class="threads-list" id="inboxThreadsList">
+            <!-- Populated via app.js -->
+          </div>
+        </div>
+
+        <!-- Inbox Active Conversation View -->
+        <div class="inbox-conversation-main">
+          <!-- Active Conversation Header -->
+          <div class="convo-header" id="activeConvoHeader">
+            <div class="convo-user-info">
+              <h3 id="inboxBorrowerName">Marcus Vance</h3>
+              <div class="convo-meta">
+                <span id="inboxBorrowerPhone">+1 (512) 843-2291</span> •
+                <span class="category-chip" id="inboxBorrowerCategory">HELOC</span> •
+                <span class="assigned-chip" id="inboxAssignedLO">Sarah Jenkins</span>
+              </div>
+            </div>
+            <div class="convo-actions">
+              <button class="btn-takeover" id="inboxTakeoverBtn" onclick="toggleActiveLeadTakeover()">
+                <span class="btn-icon">⚡</span>
+                <span id="inboxTakeoverText">Take Over as Loan Officer</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Message Transcript -->
+          <div class="convo-messages-body" id="inboxMessagesBody">
+            <!-- Messages rendered via app.js -->
+          </div>
+
+          <!-- LO Quick Response Chips -->
+          <div class="canned-responses-row">
+            <span class="canned-label">LO Quick Actions:</span>
+            <button class="chip-action"
+              onclick="insertCanned('Hi! I have your equity numbers ready. Can you take a 5-minute call now?')">📞
+              Request 5-Min Call</button>
+            <button class="chip-action"
+              onclick="insertCanned('Here is your secure link to check pre-approval rates with no impact to your credit score:')">🔗
+              Send Soft-Pull Link</button>
+            <button class="chip-action"
+              onclick="insertCanned('Great news! We can offer zero closing cost options on our 10-year HELOC.')">💰 Zero
+              Closing Cost Pitch</button>
+          </div>
+
+          <!-- Manual Loan Officer Reply Box -->
+          <form class="convo-reply-bar" onsubmit="handleSendInboxManualMessage(event)">
+            <input type="text" id="inboxManualInput" placeholder="Type a message as the assigned Loan Officer..."
+              autocomplete="off">
+            <button type="submit" class="btn-primary">
+              <span>Send SMS</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Inbox Right Sidebar: Lead Profile & LO Notes -->
+        <div class="inbox-details-sidebar">
+          <div class="sidebar-block">
+            <h4>Borrower Profile</h4>
+            <div class="sidebar-data-list" id="inboxProfileDetails">
+              <!-- Populated via app.js -->
+            </div>
+          </div>
+
+          <div class="sidebar-block">
+            <div class="notes-header-flex">
+              <h4>Internal LO Notes</h4>
+              <span class="notes-badge">Loan Officer Only</span>
+            </div>
+            <div class="notes-list" id="inboxNotesList">
+              <!-- Populated via app.js -->
+            </div>
+            <div class="add-note-box">
+              <input type="text" id="inboxNewNoteInput" placeholder="Add an internal note..."
+                onkeydown="if(event.key==='Enter') addInboxNote()">
+              <button class="btn-pill outline" onclick="addInboxNote()">Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 4: AUTOMATED SEQUENCES & CAMPAIGNS -->
+    <!-- ========================================== -->
+    <section id="tab-campaigns" class="tab-view">
+      <div class="section-intro">
+        <div class="intro-left">
+          <h2>Automated Follow-Up Sequences &amp; Campaign Management</h2>
+          <p>Configurable multi-day drip campaigns that systematically re-engage unresponsive leads while pausing
+            immediately upon lead reply, STOP keyword, or human takeover.</p>
+        </div>
+        <div class="intro-right">
+          <div class="tcpa-status-chip">
+            <span class="shield-icon">🛡️</span>
+            <span>A2P 10DLC &amp; TCPA Compliant Engine</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Campaign Cards Grid -->
+      <div class="campaigns-grid" id="campaignsGrid">
+        <!-- Populated via app.js with live data from server.js -->
+      </div>
+
+      <!-- Visual Sequence Timeline Diagram -->
+      <div class="sequence-blueprint-card">
+        <div class="blueprint-header">
+          <h3>Standard 7-Day Mortgage Lead Nurture Sequence</h3>
+          <span class="badge-pill">Autonomous Cadence</span>
+        </div>
+        <div class="sequence-timeline">
+          <div class="step-card">
+            <div class="step-badge">Initial (Day 0)</div>
+            <h4>Personalized Intro SMS</h4>
+            <p>Sent within 60s of lead capture. Personalized with borrower name, target location, and financing
+              objective.</p>
+            <div class="step-tag">Response: 41.8%</div>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="step-card">
+            <div class="step-badge">Day 1 (+24h)</div>
+            <h4>Value Proposition</h4>
+            <p>Follow-up highlighting specific loan benefits (e.g. keeping 3.1% first mortgage, $400/mo refi savings).
+            </p>
+            <div class="step-tag">Response: +14.2%</div>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="step-card">
+            <div class="step-badge">Day 3 (+72h)</div>
+            <h4>Social Proof &amp; Case Study</h4>
+            <p>Share recent local borrower success story with similar loan amount and zero hassle closing.</p>
+            <div class="step-tag">Response: +8.5%</div>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="step-card">
+            <div class="step-badge">Day 5 (+120h)</div>
+            <h4>Frictionless Question</h4>
+            <p>Low-friction micro-question: "Would you like me to send a 1-page rate breakdown by text or email?"</p>
+            <div class="step-tag">Response: +6.1%</div>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="step-card">
+            <div class="step-badge">Day 7 (Final)</div>
+            <h4>Soft Close &amp; Long-Term Shift</h4>
+            <p>Polite final check-in. If no response, lead gracefully transitions to 60-day quarterly check-in queue.
+            </p>
+            <div class="step-tag">Auto-Mute</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 5: REPORTING & ANALYTICS -->
+    <!-- ========================================== -->
+    <section id="tab-analytics" class="tab-view">
+      <div class="section-intro">
+        <div class="intro-left">
+          <h2>Lead Engagement &amp; Conversion Analytics</h2>
+          <p>Real-time visibility into outreach volume, lead qualification distribution, and loan officer conversion
+            efficacy.</p>
+        </div>
+        <div class="intro-right">
+          <span class="timeframe-label">Data Range:</span>
+          <select class="select-pill">
+            <option>Last 30 Days (Simulated)</option>
+            <option>Last 7 Days</option>
+            <option>Quarter to Date</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Top KPI Row -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <span class="kpi-title">Total Inbound Leads</span>
+          <span class="kpi-big-num">2,750</span>
+          <span class="kpi-trend positive">↑ 24.5% vs last month</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-title">SMS Contact Rate</span>
+          <span class="kpi-big-num">95.6%</span>
+          <span class="kpi-trend positive">2,630 contacted &lt;60s</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-title">Inbound Reply Rate</span>
+          <span class="kpi-big-num text-emerald">43.1%</span>
+          <span class="kpi-trend positive">4,095 lead responses</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-title">🔥 Hot Leads Identified</span>
+          <span class="kpi-big-num text-red">525</span>
+          <span class="kpi-trend highlight">Ready for Loan Officers</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-title">Human Handoffs</span>
+          <span class="kpi-big-num text-blue">382</span>
+          <span class="kpi-trend">Live meetings &amp; calls booked</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-title">TCPA Opt-Out Rate</span>
+          <span class="kpi-big-num">0.8%</span>
+          <span class="kpi-trend">Benchmark is &lt; 2.5%</span>
+        </div>
+      </div>
+
+      <!-- Visual Charts Mock -->
+      <div class="analytics-charts-grid">
+        <!-- Lead Segmentation Breakdown -->
+        <div class="chart-card">
+          <div class="chart-header">
+            <h3>Lead Categorization Distribution</h3>
+            <span class="badge-mini">3 Core Programs</span>
+          </div>
+          <div class="segment-bars">
+            <div class="bar-group">
+              <div class="bar-label-row">
+                <span>HELOC (Home Equity Lines)</span>
+                <span class="font-bold">1,240 leads (45.1%)</span>
+              </div>
+              <div class="prog-track">
+                <div class="prog-fill emerald" style="width: 45.1%"></div>
+              </div>
+            </div>
+            <div class="bar-group">
+              <div class="bar-label-row">
+                <span>Mortgage Refinance</span>
+                <span class="font-bold">890 leads (32.4%)</span>
+              </div>
+              <div class="prog-track">
+                <div class="prog-fill blue" style="width: 32.4%"></div>
+              </div>
+            </div>
+            <div class="bar-group">
+              <div class="bar-label-row">
+                <span>Residential Home Purchase</span>
+                <span class="font-bold">620 leads (22.5%)</span>
+              </div>
+              <div class="prog-track">
+                <div class="prog-fill purple" style="width: 22.5%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Intent Breakdown -->
+        <div class="chart-card">
+          <div class="chart-header">
+            <h3>AI Lead Intent Classification</h3>
+            <span class="badge-mini">Automated Scoring</span>
+          </div>
+          <div class="score-breakdown-row">
+            <div class="score-circle-stat hot">
+              <span class="stat-perc">19.1%</span>
+              <span class="stat-tag">🔥 Hot (525)</span>
+              <span class="stat-sub">Immediate LO handoff</span>
+            </div>
+            <div class="score-circle-stat warm">
+              <span class="stat-perc">41.5%</span>
+              <span class="stat-tag">☀️ Warm (1,140)</span>
+              <span class="stat-sub">Researching 30-60d</span>
+            </div>
+            <div class="score-circle-stat cold">
+              <span class="stat-perc">35.1%</span>
+              <span class="stat-tag">❄️ Cold (965)</span>
+              <span class="stat-sub">Long-term drip</span>
+            </div>
+            <div class="score-circle-stat muted">
+              <span class="stat-perc">4.3%</span>
+              <span class="stat-tag">⛔ Stopped (120)</span>
+              <span class="stat-sub">Opted-out / Invalid</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 6: TECHNICAL ARCHITECTURE -->
+    <!-- ========================================== -->
+    <section id="tab-architecture" class="tab-view">
+      <div class="section-intro">
+        <div class="intro-left">
+          <h2>Enterprise System Architecture &amp; Technology Stack</h2>
+          <p>Built with enterprise-grade open technologies: Next.js frontend, Node.js / NestJS API services, PostgreSQL
+            persistent storage, Redis caching, BullMQ job queues, OpenAI conversational models, and Twilio / Telnyx SMS
+            gateways.</p>
+        </div>
+      </div>
+
+      <!-- Architecture Diagram Visual -->
+      <div class="architecture-diagram-card">
+        <div class="arch-flow">
+          <!-- Flow Step 1 -->
+          <div class="arch-node">
+            <div class="node-icon">📥</div>
+            <h4>1. Lead Capture</h4>
+            <p>GreenLending.com website forms, landing pages, or CSV uploads trigger automated ingest API.</p>
+            <div class="node-badge">REST API / Webhooks</div>
+          </div>
+          <div class="arch-connector">➜</div>
+
+          <!-- Flow Step 2 -->
+          <div class="arch-node highlight-emerald">
+            <div class="node-icon">⚙️</div>
+            <h4>2. BullMQ &amp; Redis</h4>
+            <p>High-speed job queue coordinates outbound SMS rate limits, conversation state locks, and retry queues.
+            </p>
+            <div class="node-badge">Redis + BullMQ</div>
+          </div>
+          <div class="arch-connector">➜</div>
+
+          <!-- Flow Step 3 -->
+          <div class="arch-node highlight-blue">
+            <div class="node-icon">🤖</div>
+            <h4>3. OpenAI Engine</h4>
+            <p>Context-aware conversational models qualify HELOC, Refinance, or Purchase criteria in natural language.
+            </p>
+            <div class="node-badge">OpenAI GPT-4o API</div>
+          </div>
+          <div class="arch-connector">➜</div>
+
+          <!-- Flow Step 4 -->
+          <div class="arch-node">
+            <div class="node-icon">📡</div>
+            <h4>4. SMS Gateway</h4>
+            <p>Twilio or Telnyx delivers 2-way SMS with 10DLC registration, carrier compliance, and inbound webhooks.
+            </p>
+            <div class="node-badge">Twilio / Telnyx</div>
+          </div>
+          <div class="arch-connector">➜</div>
+
+          <!-- Flow Step 5 -->
+          <div class="arch-node highlight-gold">
+            <div class="node-icon">💼</div>
+            <h4>5. Green Lending CRM</h4>
+            <p>Human LO dashboard with instant alerts, conversation transcripts, and Hubspot / Salesforce sync.</p>
+            <div class="node-badge">PostgreSQL + WS</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tech Stack Comparison Cards -->
+      <div class="tech-stack-cards-grid">
+        <div class="tech-card">
+          <h4>🗄️ PostgreSQL Database</h4>
+          <p>Permanent system of record for leads, contact info, consent audit trails, loan qualification values, and
+            full two-way message transcripts.</p>
+        </div>
+        <div class="tech-card">
+          <h4>⚡ Redis Infrastructure</h4>
+          <p>Ultra-low latency message coordination, rate limiting, duplicate message prevention, and conversation lock
+            management.</p>
+        </div>
+        <div class="tech-card">
+          <h4>📦 BullMQ Job Workers</h4>
+          <p>Asynchronous background tasks that process thousands of SMS messages per minute without blocking the client
+            web application.</p>
+        </div>
+        <div class="tech-card">
+          <h4>🧠 AI Conversational Logic</h4>
+          <p>Custom mortgage qualification prompts with financial safety guardrails (no binding rate guarantees, strict
+            TCPA alignment).</p>
+        </div>
+        <div class="tech-card">
+          <h4>📱 Twilio / Telnyx Gateway</h4>
+          <p>Direct US carrier connectivity, A2P 10DLC campaign brand registration, shortcode/toll-free verification,
+            and delivery reporting.</p>
+        </div>
+        <div class="tech-card">
+          <h4>🔌 CRM API Integrations</h4>
+          <p>Turnkey integration with HubSpot, Salesforce, GoHighLevel, or custom LOS (Loan Origination Systems) via
+            bidirectional webhooks.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 7: EXECUTIVE PROJECT PROPOSAL -->
+    <!-- ========================================== -->
+    <section id="tab-proposal" class="tab-view" id="proposal-section">
+      <div class="section-intro">
+        <div class="intro-left">
+          <h2>Official Project Proposal &amp; Technical Scope</h2>
+          <p>Custom AI-Powered Mortgage Lead Engagement &amp; Texting Platform prepared by <strong>Neo Gen
+              Technologies</strong> for <strong>Green Lending</strong>.</p>
+        </div>
+        <div class="intro-right">
+          <button class="btn-outline" onclick="window.print()">
+            <span class="btn-icon">🖨️</span>
+            <span>Print / Save as PDF</span>
+          </button>
+          <button class="btn-primary" onclick="openKickoffModal()">
+            <span>Accept Proposal &amp; Sign Off</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Proposal Document Sheet -->
+      <div class="proposal-doc-sheet">
+
+        <!-- Header Banner of Document -->
+        <div class="doc-header">
+          <div class="doc-brand">
+            <div class="co-brand-pair">
+              <img src="/assets/neogen-logo.jpg" alt="Neo Gen Technologies" class="doc-logo">
+              <span class="co-brand-x">🤝</span>
+              <div class="doc-gl-logo-box">
+                <img src="/assets/greenlending-logo.png" alt="Green Lending" class="doc-gl-logo">
+              </div>
+            </div>
+            <div>
+              <h3>Neo Gen Technologies &times; Green Lending</h3>
+              <p>Custom AI Software Development &amp; Automation Platform</p>
+              <p class="text-dim">neogentechnologies.com &bull; greenlending.com</p>
+            </div>
+          </div>
+          <div class="doc-meta">
+            <div class="meta-row"><span>Client:</span> <strong>Green Lending (greenlending.com)</strong></div>
+            <div class="meta-row"><span>Prepared by:</span> <strong>Neo Gen Technologies</strong></div>
+            <div class="meta-row"><span>Project Type:</span> <strong>Custom AI Lead Platform</strong></div>
+            <div class="meta-row"><span>Estimated Timeline:</span> <strong>4–6 Weeks</strong></div>
+            <div class="meta-row"><span>Core Investment:</span> <strong class="text-emerald font-bold">$5,700
+                USD</strong></div>
+            <div class="meta-row"><span>Monthly Maintenance:</span> <strong class="text-emerald font-bold">$650 /
+                month</strong></div>
+          </div>
+        </div>
+
+        <hr class="doc-divider">
+
+        <!-- Executive Summary Section -->
+        <div class="doc-section">
+          <h3>1. Executive Summary</h3>
+          <p>
+            Neo Gen Technologies proposes developing a custom AI-powered mortgage lead engagement and texting platform
+            designed to automate communication, qualification, nurturing, and conversion of mortgage prospects for
+            <strong>Green Lending</strong>.
+          </p>
+          <p>
+            Unlike conventional SMS marketing tools that send rigid, pre-written blast messages, this platform deploys a
+            tailored conversational AI engine capable of understanding incoming borrower responses, maintaining context,
+            asking mortgage-specific qualification questions, and instantly routing hot prospects to your licensed loan
+            officers.
+          </p>
+          <div class="callout-box">
+            <strong>Target Mortgage Lead Workflows:</strong>
+            <ul>
+              <li><strong>HELOC (Home Equity Lines of Credit):</strong> Property value, existing mortgage balance,
+                accessible equity, borrowing need, purpose of funds.</li>
+              <li><strong>Mortgage Refinancing:</strong> Current balance, current interest rate, target monthly savings,
+                credit profile, refinancing timeline.</li>
+              <li><strong>Home Purchase:</strong> Target budget, location, down payment readiness, pre-approval letter
+                status, agent representation.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Platform Deployment Options Comparison -->
+        <div class="doc-section">
+          <h3>2. Platform Deployment Options Comparison</h3>
+          <p>We evaluated three primary implementation paths for Green Lending:</p>
+
+          <div class="comparison-table-wrap">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Evaluation Criteria</th>
+                  <th>Option A: GoHighLevel</th>
+                  <th>Option B: Salesmsg + CRM</th>
+                  <th class="recommended-th">Option C: Custom Neo Gen Platform (Recommended)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Ownership &amp; IP</strong></td>
+                  <td>Rented SaaS (GHL owns platform)</td>
+                  <td>Rented SaaS (Salesmsg owns platform)</td>
+                  <td class="recommended-td"><strong>100% Owned by Green Lending</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>AI Conversation Engine</strong></td>
+                  <td>Rigid bot / generic prompts</td>
+                  <td>Basic AI assist features</td>
+                  <td class="recommended-td"><strong>Context-aware Mortgage AI Engine</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Mortgage Customization</strong></td>
+                  <td>Generic CRM adapted to mortgage</td>
+                  <td>Basic SMS integration</td>
+                  <td class="recommended-td"><strong>Built exclusively for HELOC, Refi &amp; Purchase</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Commercial Expansion</strong></td>
+                  <td>Cannot resell as proprietary SaaS</td>
+                  <td>Cannot resell</td>
+                  <td class="recommended-td"><strong>Multi-tenant architecture can be monetized</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Development Cost</strong></td>
+                  <td>$1,800 – $2,500</td>
+                  <td>$1,500 – $2,200</td>
+                  <td class="recommended-td"><strong>$5,700 (One-Time Turnkey)</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Monthly Management</strong></td>
+                  <td>$350 – $500/mo</td>
+                  <td>$300 – $450/mo</td>
+                  <td class="recommended-td"><strong>$650/month (Full Maintenance &amp; Optimization)</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Scope Breakdown & Investment Table -->
+        <div class="doc-section">
+          <h3>3. Scope of Work &amp; Milestone Schedule</h3>
+          <p>The total investment for the custom-built platform is <strong>$5,700</strong>, distributed across three
+            milestones:</p>
+
+          <div class="milestones-table-wrap">
+            <table class="milestones-table">
+              <thead>
+                <tr>
+                  <th>Milestone</th>
+                  <th>Description &amp; Key Deliverables</th>
+                  <th>Timeline</th>
+                  <th>Investment</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <span class="m-pill">Milestone 1 (40%)</span>
+                    <strong>Project Initiation &amp; Backend Foundation</strong>
+                  </td>
+                  <td>
+                    System architecture setup, PostgreSQL database schema, Redis &amp; BullMQ worker queues, Twilio /
+                    Telnyx SMS integration, TCPA compliance rules &amp; consent tracking.
+                  </td>
+                  <td>Days 1–8</td>
+                  <td class="font-bold text-emerald">$2,280</td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="m-pill">Milestone 2 (30%)</span>
+                    <strong>Core Platform &amp; AI Workflows</strong>
+                  </td>
+                  <td>
+                    HELOC, Refinance, and Purchase AI conversation engines, dynamic follow-up sequences, centralized CRM
+                    dashboard, two-way SMS inbox, and loan officer notification engine.
+                  </td>
+                  <td>Days 9–22</td>
+                  <td class="font-bold text-emerald">$1,710</td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="m-pill">Milestone 3 (30%)</span>
+                    <strong>Testing, Integration &amp; Deployment</strong>
+                  </td>
+                  <td>
+                    CRM integration (HubSpot, Salesforce, or GHL), human agent handoff validation, production
+                    deployment, team training, and handover documentation.
+                  </td>
+                  <td>Days 23–35</td>
+                  <td class="font-bold text-emerald">$1,710</td>
+                </tr>
+                <tr class="total-row">
+                  <td colspan="3"><strong>Total Development Investment</strong></td>
+                  <td class="font-bold text-emerald">$5,700</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Monthly Maintenance & Support -->
+        <div class="doc-section">
+          <h3>4. Monthly Maintenance &amp; Ongoing Management ($650/month)</h3>
+          <p>Following production launch, Neo Gen Technologies provides comprehensive technical management:</p>
+          <div class="sla-grid">
+            <div class="sla-item">
+              <span class="sla-icon">🛡️</span>
+              <div>
+                <strong>System Maintenance &amp; Infrastructure Monitoring ($200/mo)</strong>
+                <p>24/7 server monitoring, database backups, uptime maintenance, and security patch application.</p>
+              </div>
+            </div>
+            <div class="sla-item">
+              <span class="sla-icon">🤖</span>
+              <div>
+                <strong>AI Automation &amp; Prompt Tuning ($200/mo)</strong>
+                <p>Continuous refinement of conversation logic, prompt tuning, and mortgage objection handling.</p>
+              </div>
+            </div>
+            <div class="sla-item">
+              <span class="sla-icon">📈</span>
+              <div>
+                <strong>Performance &amp; Queue Optimization ($150/mo)</strong>
+                <p>BullMQ queue tuning, Redis performance auditing, and carrier delivery rate optimization.</p>
+              </div>
+            </div>
+            <div class="sla-item">
+              <span class="sla-icon">📞</span>
+              <div>
+                <strong>Dedicated Technical Support ($100/mo)</strong>
+                <p>Priority developer support for Green Lending loan officers and administrative staff.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NEW SECTION 5: MODULAR PLATFORM ADD-ONS -->
+        <div class="doc-section">
+          <div class="section-heading-flex">
+            <div>
+              <h3>5. Modular Platform Add-Ons &amp; Pricing</h3>
+              <p>Enhance Green Lending's core platform with high-impact automated modules. Check any add-on below to
+                update your dynamic project scope.</p>
+            </div>
+          </div>
+
+          <div class="addons-grid">
+            <!-- Addon 1 -->
+            <div class="addon-card" id="addon-voice" onclick="toggleAddon('voice', 2400, 250)">
+              <div>
+                <div class="addon-top">
+                  <label class="addon-checkbox-label">
+                    <input type="checkbox" class="addon-checkbox" id="chk-voice"
+                      onchange="event.stopPropagation(); syncAddonState('voice', 2400, 250)">
+                    <span class="addon-badge popular">High ROI</span>
+                  </label>
+                  <span class="tab-badge hot">Voice AI</span>
+                </div>
+                <h4 class="addon-title">AI Outbound &amp; Inbound Voice Calling Agent</h4>
+                <p class="addon-desc">Automated voice calling for incoming leads within 60 seconds with human-like
+                  conversation, qualifying borrower criteria and warm-transferring calls to available loan officers.</p>
+                <ul class="addon-features">
+                  <li>Natural ultra-low latency voice (OpenAI Realtime + ElevenLabs)</li>
+                  <li>Live loan officer phone transfer when borrower is qualified</li>
+                  <li>Automatic call recording, transcription &amp; CRM timeline sync</li>
+                </ul>
+              </div>
+              <div class="addon-pricing-tag">
+                <div class="addon-price-val">+$2,400</div>
+                <div class="addon-price-sub">+$250/mo maintenance</div>
+              </div>
+            </div>
+
+            <!-- Addon 2 -->
+            <div class="addon-card" id="addon-reactivation" onclick="toggleAddon('reactivation', 1200, 150)">
+              <div>
+                <div class="addon-top">
+                  <label class="addon-checkbox-label">
+                    <input type="checkbox" class="addon-checkbox" id="chk-reactivation"
+                      onchange="event.stopPropagation(); syncAddonState('reactivation', 1200, 150)">
+                    <span class="addon-badge">Database Mining</span>
+                  </label>
+                  <span class="tab-badge count">Equity Alert</span>
+                </div>
+                <h4 class="addon-title">AI Aged Lead Reactivation Engine</h4>
+                <p class="addon-desc">Re-engage 6–24 month old dormant leads by cross-referencing estimated home equity
+                  increases and recent rate movements with automated consent compliance.</p>
+                <ul class="addon-features">
+                  <li>Automates personalized re-intro texts to past inquiries</li>
+                  <li>Equity-gain calculations tailored to borrower zip code</li>
+                  <li>Strict TCPA opt-in re-validation and suppression controls</li>
+                </ul>
+              </div>
+              <div class="addon-pricing-tag">
+                <div class="addon-price-val">+$1,200</div>
+                <div class="addon-price-sub">+$150/mo maintenance</div>
+              </div>
+            </div>
+
+            <!-- Addon 3 -->
+            <div class="addon-card" id="addon-los" onclick="toggleAddon('los', 1800, 150)">
+              <div>
+                <div class="addon-top">
+                  <label class="addon-checkbox-label">
+                    <input type="checkbox" class="addon-checkbox" id="chk-los"
+                      onchange="event.stopPropagation(); syncAddonState('los', 1800, 150)">
+                    <span class="addon-badge">Enterprise Sync</span>
+                  </label>
+                  <span class="tab-badge count">LOS</span>
+                </div>
+                <h4 class="addon-title">Direct LOS Integration (Encompass / LendingPad)</h4>
+                <p class="addon-desc">Deep bi-directional sync with Green Lending's Loan Origination System,
+                  auto-populating 1003 preliminary mortgage loan data and triggering milestone status SMS updates.</p>
+                <ul class="addon-features">
+                  <li>Automatic 1003 draft file creation from AI SMS data</li>
+                  <li>Milestone SMS triggers: Underwriting, Conditional, Clear to Close</li>
+                  <li>Real-time loan status checks via automated borrower texts</li>
+                </ul>
+              </div>
+              <div class="addon-pricing-tag">
+                <div class="addon-price-val">+$1,800</div>
+                <div class="addon-price-sub">+$150/mo maintenance</div>
+              </div>
+            </div>
+
+            <!-- Addon 4 -->
+            <div class="addon-card" id="addon-bilingual" onclick="toggleAddon('bilingual', 950, 100)">
+              <div>
+                <div class="addon-top">
+                  <label class="addon-checkbox-label">
+                    <input type="checkbox" class="addon-checkbox" id="chk-bilingual"
+                      onchange="event.stopPropagation(); syncAddonState('bilingual', 950, 100)">
+                    <span class="addon-badge">Demographic Growth</span>
+                  </label>
+                  <span class="tab-badge count">Spanish</span>
+                </div>
+                <h4 class="addon-title">Bilingual AI Qualification Engine (ES / EN)</h4>
+                <p class="addon-desc">Autonomous language detection and fluent Hispanic/Latino mortgage qualification
+                  for HELOC, Refinance, and First-Time Homebuyers in Spanish.</p>
+                <ul class="addon-features">
+                  <li>Automatic inbound language detection (English &amp; Spanish)</li>
+                  <li>Culturally nuanced mortgage terminology (Línea HELOC, Refinanciamiento)</li>
+                  <li>Routes Spanish-speaking leads to bilingual loan officers</li>
+                </ul>
+              </div>
+              <div class="addon-pricing-tag">
+                <div class="addon-price-val">+$950</div>
+                <div class="addon-price-sub">+$100/mo maintenance</div>
+              </div>
+            </div>
+
+            <!-- Addon 5 -->
+            <div class="addon-card" id="addon-mobile" onclick="toggleAddon('mobile', 1600, 150)">
+              <div>
+                <div class="addon-top">
+                  <label class="addon-checkbox-label">
+                    <input type="checkbox" class="addon-checkbox" id="chk-mobile"
+                      onchange="event.stopPropagation(); syncAddonState('mobile', 1600, 150)">
+                    <span class="addon-badge">Field LO App</span>
+                  </label>
+                  <span class="tab-badge count">PWA</span>
+                </div>
+                <h4 class="addon-title">Loan Officer Mobile PWA (iOS &amp; Android)</h4>
+                <p class="addon-desc">Dedicated mobile progressive web app enabling Green Lending loan officers to
+                  receive push alerts for Hot leads and perform 1-tap call or text takeovers on the go.</p>
+                <ul class="addon-features">
+                  <li>Instant push notifications when borrower scores &gt; 80%</li>
+                  <li>1-tap takeover with native carrier dialer masking</li>
+                  <li>Biometric secure face/fingerprint authentication</li>
+                </ul>
+              </div>
+              <div class="addon-pricing-tag">
+                <div class="addon-price-val">+$1,600</div>
+                <div class="addon-price-sub">+$150/mo maintenance</div>
+              </div>
+            </div>
+
+            <!-- Addon 6 -->
+            <div class="addon-card" id="addon-omnichannel" onclick="toggleAddon('omnichannel', 1100, 120)">
+              <div>
+                <div class="addon-top">
+                  <label class="addon-checkbox-label">
+                    <input type="checkbox" class="addon-checkbox" id="chk-omnichannel"
+                      onchange="event.stopPropagation(); syncAddonState('omnichannel', 1100, 120)">
+                    <span class="addon-badge">Multi-Channel</span>
+                  </label>
+                  <span class="tab-badge count">Web &amp; WhatsApp</span>
+                </div>
+                <h4 class="addon-title">Omnichannel Web Widget &amp; WhatsApp AI</h4>
+                <p class="addon-desc">Expands the conversational qualification engine from SMS to an embedded
+                  greenlending.com interactive chat widget and verified WhatsApp Business channel.</p>
+                <ul class="addon-features">
+                  <li>Branded greenlending.com live web chat qualification bubble</li>
+                  <li>WhatsApp Business API automated messaging gateway</li>
+                  <li>Unified conversation history synchronized to Green Lending CRM</li>
+                </ul>
+              </div>
+              <div class="addon-pricing-tag">
+                <div class="addon-price-val">+$1,100</div>
+                <div class="addon-price-sub">+$120/mo maintenance</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NEW SECTION 6: ENTERPRISE SCALABILITY & EXPANSION OPTIONS -->
+        <div class="doc-section">
+          <h3>6. Enterprise Scalability &amp; Commercial Expansion Options</h3>
+          <p>Architectural expansion options designed for Green Lending's multi-branch growth or monetization as a
+            commercial SaaS product:</p>
+
+          <div class="scalability-grid">
+            <!-- Scalability 1 -->
+            <div class="scale-card">
+              <div>
+                <span class="scale-tag">Branch Scale Tier</span>
+                <h4 class="scale-title">Multi-Branch Mortgage Architecture</h4>
+                <p class="scale-desc">Expands the platform to support distinct physical branches or satellite mortgage
+                  offices with regional phone number pools, regional loan officer routing, and branch manager KPI
+                  oversight.</p>
+                <ul class="addon-features">
+                  <li>Independent branch workspace partitions</li>
+                  <li>Geographic area-code routing (Austin, Phoenix, Cary, Denver)</li>
+                  <li>Branch-level performance reporting &amp; loan officer leaderboards</li>
+                </ul>
+              </div>
+              <div class="scale-price-row">
+                <div class="scale-price-num">$2,800</div>
+                <div class="scale-price-maint">+$300/mo management</div>
+              </div>
+            </div>
+
+            <!-- Scalability 2 -->
+            <div class="scale-card featured">
+              <div>
+                <span class="scale-tag">Commercial Monetization</span>
+                <h4 class="scale-title">Multi-Company Commercial SaaS Reseller Platform</h4>
+                <p class="scale-desc">Transforms Green Lending's proprietary engine into a multi-tenant commercial SaaS
+                  product. Green Lending can license and resell this software to external mortgage brokerages and
+                  lenders on recurring subscriptions.</p>
+                <ul class="addon-features">
+                  <li>Full multi-tenant database &amp; workspace isolation</li>
+                  <li>Stripe automated subscription billing &amp; credit card management</li>
+                  <li>Tenant onboarding portal with custom company branding</li>
+                  <li>Brokerage-level admin dashboards and seat management</li>
+                </ul>
+              </div>
+              <div class="scale-price-row">
+                <div class="scale-price-num">$4,500</div>
+                <div class="scale-price-maint">+$450/mo management</div>
+              </div>
+            </div>
+
+            <!-- Scalability 3 -->
+            <div class="scale-card">
+              <div>
+                <span class="scale-tag">Enterprise Carrier Tier</span>
+                <h4 class="scale-title">Dedicated High-Throughput Carrier Short Code (100+ CPS)</h4>
+                <p class="scale-desc">For ultra-high volume mortgage operations processing 50,000+ leads per month.
+                  Provisioning a dedicated US 5 or 6-digit short code delivering 100+ messages per second with top
+                  carrier priority.</p>
+                <ul class="addon-features">
+                  <li>Carrier short code compliance filing &amp; vetting</li>
+                  <li>Ultra-high throughput BullMQ cluster scaling</li>
+                  <li>Direct carrier peering with 99.9% inbox delivery guarantee</li>
+                </ul>
+              </div>
+              <div class="scale-price-row">
+                <div class="scale-price-num">$1,500 Setup</div>
+                <div class="scale-price-maint">Carrier usage pass-through</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NEW SECTION 7: INTERACTIVE PROPOSAL INVESTMENT CALCULATOR -->
+        <div class="doc-section">
+          <div class="proposal-calculator-card">
+            <div class="calc-header">
+              <div>
+                <h3>7. Interactive Project Investment Summary</h3>
+                <span class="modal-sub">Select or deselect add-on modules above to customize your delivery scope</span>
+              </div>
+              <span class="panel-tag">Live Proposal Calculator</span>
+            </div>
+
+            <div class="calc-summary-grid">
+              <div class="calc-box">
+                <span class="calc-label">Core Platform Development</span>
+                <span class="calc-num">$5,700</span>
+                <span class="calc-subtext">3 Milestones: $2,280 / $1,710 / $1,710</span>
+              </div>
+              <div class="calc-box">
+                <span class="calc-label">Selected Add-Ons One-Time</span>
+                <span class="calc-num text-cyan" id="calcAddonsOneTime">$0</span>
+                <span class="calc-subtext" id="calcAddonsCount">0 optional modules selected</span>
+              </div>
+              <div class="calc-box">
+                <span class="calc-label">Total One-Time Development</span>
+                <span class="calc-num text-emerald" id="calcTotalOneTime">$5,700</span>
+                <span class="calc-subtext">Proprietary Software (100% Owned)</span>
+              </div>
+              <div class="calc-box">
+                <span class="calc-label">Total Monthly Management SLA</span>
+                <span class="calc-num text-emerald" id="calcTotalMonthly">$650/mo</span>
+                <span class="calc-subtext" id="calcMonthlySubtext">Core SLA ($650/mo)</span>
+              </div>
+            </div>
+
+            <div class="calc-action-row">
+              <div class="calc-note">
+                💡 <strong>Commercial Guarantee:</strong> All deliverables are backed by milestone acceptance. You only
+                release milestone disbursements after reviewing working software.
+              </div>
+              <button class="btn-primary" onclick="openKickoffModal()">
+                <span>Accept Proposal with Selected Scope</span>
+                <span class="btn-arrow">→</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sign-Off Action Card -->
+        <div class="doc-footer-cta">
+          <div class="cta-left">
+            <h4>Ready to accelerate Green Lending's mortgage conversion?</h4>
+            <p>Approve this proposal to lock in your dedicated engineering sprint with Neo Gen Technologies.</p>
+          </div>
+          <div class="cta-right">
+            <button class="btn-primary big-cta" onclick="openKickoffModal()">
+              <span>Approve Proposal &amp; Schedule Kickoff</span>
+              <span class="btn-arrow">→</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MODAL: Lead Detail Drawer / Modal -->
+  <div class="modal-backdrop" id="leadModalBackdrop" onclick="closeLeadModal()">
+    <div class="modal-dialog" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <div>
+          <h3 id="modalLeadName">Marcus Vance</h3>
+          <span class="modal-sub" id="modalLeadSub">Lead Profile &amp; Audit Trail</span>
+        </div>
+        <button class="modal-close" onclick="closeLeadModal()">✕</button>
+      </div>
+
+      <div class="modal-body" id="modalLeadBody">
+        <!-- Rendered via app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Add New Lead Form -->
+  <div class="modal-backdrop" id="newLeadModalBackdrop" onclick="closeNewLeadModal()">
+    <div class="modal-dialog small-dialog" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <h3>Add Inbound Mortgage Lead</h3>
+        <button class="modal-close" onclick="closeNewLeadModal()">✕</button>
+      </div>
+      <form class="modal-body form-grid" onsubmit="handleCreateLead(event)">
+        <div class="form-group">
+          <label>Borrower Full Name</label>
+          <input type="text" id="newLeadName" required placeholder="e.g. Rachel Adams">
+        </div>
+        <div class="form-group">
+          <label>Mobile Phone (for SMS)</label>
+          <input type="tel" id="newLeadPhone" required placeholder="+1 (512) 555-0199">
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" id="newLeadEmail" required placeholder="rachel@example.com">
+        </div>
+        <div class="form-group">
+          <label>Mortgage Category</label>
+          <select id="newLeadCategory">
+            <option value="HELOC">HELOC (Home Equity)</option>
+            <option value="Refinance">Mortgage Refinance</option>
+            <option value="Purchase">Home Purchase</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Estimated Property Value / Budget</label>
+          <input type="text" id="newLeadVal" placeholder="$550,000">
+        </div>
+        <div class="form-group">
+          <label>Assign to Loan Officer</label>
+          <select id="newLeadLO">
+            <option value="Sarah Jenkins (Senior LO)">Sarah Jenkins (Senior LO)</option>
+            <option value="David Miller">David Miller</option>
+            <option value="Alex Chen">Alex Chen</option>
+          </select>
+        </div>
+        <div class="form-actions">
+          <button type="button" class="btn-outline" onclick="closeNewLeadModal()">Cancel</button>
+          <button type="submit" class="btn-primary">Create &amp; Trigger AI Outreach</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: Schedule Kickoff / Approve Proposal -->
+  <div class="modal-backdrop" id="kickoffModalBackdrop" onclick="closeKickoffModal()">
+    <div class="modal-dialog small-dialog" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <div class="co-brand-modal-title">
+          <img src="/assets/neogen-logo.jpg" alt="Neo Gen" class="modal-thumb">
+          <div>
+            <h3>Schedule Project Kickoff</h3>
+            <span class="modal-sub">Green Lending &times; Neo Gen Technologies</span>
+          </div>
+        </div>
+        <button class="modal-close" onclick="closeKickoffModal()">✕</button>
+      </div>
+      <div class="modal-body kickoff-modal-body">
+        <div class="kickoff-summary-box">
+          <div class="summary-line">
+            <span>Project:</span>
+            <strong>Custom AI Mortgage Lead Platform</strong>
+          </div>
+          <div class="summary-line">
+            <span>Delivery Model:</span>
+            <strong class="text-emerald">3 Phased Milestones</strong>
+          </div>
+          <div class="summary-line">
+            <span>Initiation Sprint:</span>
+            <strong>Milestone 1 Discovery &amp; Backend</strong>
+          </div>
+          <div class="summary-line">
+            <span>Target Delivery:</span>
+            <strong>4–6 Weeks</strong>
+          </div>
+        </div>
+
+        <form onsubmit="handleScheduleKickoff(event)">
+          <div class="form-group">
+            <label>Authorized Signer / Representative</label>
+            <input type="text" id="signerName" required value="Green Lending Executive" placeholder="Your Name">
+          </div>
+          <div class="form-group">
+            <label>Direct Contact Email</label>
+            <input type="email" id="signerEmail" required value="team@greenlending.com"
+              placeholder="email@greenlending.com">
+          </div>
+          <div class="form-group">
+            <label>Preferred Discovery Call Date</label>
+            <input type="date" id="kickoffDate" required>
+          </div>
+          <div class="form-group">
+            <label>Primary SMS Provider Preference</label>
+            <select id="smsProviderPref">
+              <option value="Twilio">Twilio (Recommended primary provider)</option>
+              <option value="Telnyx">Telnyx (Alternative infrastructure)</option>
+            </select>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn-outline" onclick="closeKickoffModal()">Close</button>
+            <button type="submit" class="btn-primary">Confirm &amp; Initiate Onboarding</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notification Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Main JavaScript application -->
+  <script src="/js/app.js"></script>
+</body>
+
+</html>

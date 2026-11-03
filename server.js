@@ -633,13 +633,19 @@ const server = http.createServer(async (req, res) => {
     safePath = '/index.html';
   }
 
-  const filePath = path.join(PUBLIC_DIR, safePath);
+  let filePath = path.join(PUBLIC_DIR, safePath);
+  if (!fs.existsSync(filePath) || !fs.statSync(filePath).isFile()) {
+    filePath = path.join(__dirname, safePath);
+  }
 
   fs.stat(filePath, (err, stats) => {
     if (err || !stats.isFile()) {
-      // 404 Fallback to index.html for SPA feel or 404
-      const indexPath = path.join(PUBLIC_DIR, 'index.html');
-      fs.readFile(indexPath, (readErr, content) => {
+      // Fallback to root or public index.html for SPA feel
+      const rootIndex = path.join(__dirname, 'index.html');
+      const publicIndex = path.join(PUBLIC_DIR, 'index.html');
+      const targetIndex = fs.existsSync(rootIndex) ? rootIndex : publicIndex;
+
+      fs.readFile(targetIndex, (readErr, content) => {
         if (readErr) {
           res.writeHead(404, { 'Content-Type': 'text/plain' });
           res.end('404 Not Found');
