@@ -1,0 +1,23 @@
+{
+  "name": "greenlending-ai-platform",
+  "version": "1.0.0",
+  "description": "Custom AI-Powered Mortgage Lead Engagement & Texting Platform for Green Lending, built by Neo Gen Technologies",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "ai",
+    "mortgage",
+    "heloc",
+    "refinance",
+    "lead-qualification",
+    "sms-automation",
+    "green-lending",
+    "neo-gen-technologies"
+  ],
+  "author": "Neo Gen Technologies",
+  "license": "Proprietary"
+}
+
